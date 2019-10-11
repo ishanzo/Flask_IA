@@ -1,0 +1,13 @@
+body{
+  background: blue;
+  color: white;
+}
+.name
+{
+  text-align:center;
+}
+.form
+{
+  margin: 0 auto;
+  width:250px;
+}
