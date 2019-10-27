@@ -15,15 +15,17 @@ def api_call():
     auth.set_access_token(access_token, access_token_secret)
     #Creating the API object while passing in auth information
     api = tweepy.API(auth)
-    results = api.search(q="gif")
+    results = api.search(q="filter:images", lang="en")
     #result_type="popular"
     # tweets = results[0]
+    all_tweets = []
     for tweet in results:
     #     # print(tweet.media_url)
+        print(f"{tweet.user.name}:{tweet.type}")
 
-    #     # print(f"{tweet.user.name}:{tweet.extended_entities.media}")
-        data_tweets = f"{tweet.user.name}:{tweet.text}"
-        return data_tweets
+
+
+
 
 print(api_call())
 # json_str = json.dumps(tweets._json)
